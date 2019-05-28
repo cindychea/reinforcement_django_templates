@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-  <label for="email">email</label>
+  {% for element in element %}
+    <label for="{{ element }}">{{ element }}</label>
+    <input type="text" name="{{ element }}" id="{{ element }}" class="fancy_form" >
+  {% endfor %}
+  <!-- <label for="email">email</label>
   <input type="text" name="email" id="email" class="fancy_form" >
 
   <label for="username">username</label>
@@ -16,5 +20,5 @@
   <input type="text" name="address" id="address" class="fancy_form" >
 
   <label for="alias">alias</label>
-  <input type="text" name="alias" id="alias" class="fancy_form" >
+  <input type="text" name="alias" id="alias" class="fancy_form" > -->
 {% endblock %}

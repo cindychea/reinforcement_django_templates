@@ -17,5 +17,6 @@ from django.urls import path
 import reinforcement_templates.views as views
 
 urlpatterns = [
+    path('', views.root),
     path('profiles/new', views.new_profile),
 ]
